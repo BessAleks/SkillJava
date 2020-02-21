@@ -12,15 +12,21 @@ public class Main
 
     public static void main(String[] args)
     {
+        //=============Первый вариант сортировки по двум критериям =====================================================
+        //ArrayList<Employee> staff = loadStaffFromFile();
+        //Collections.sort(staff, (o1, o2) -> {
+            //if (o1.getSalary().compareTo(o2.getSalary()) == 0) {
+            //return o1.getName().compareTo(o2.getName());}
+            //else {
+            //return o1.getSalary().compareTo(o2.getSalary());
+            //}
+        //});
+        //==============================================================================================================
+        //=============Второй вариант сортировки по двум критериям =====================================================
         ArrayList<Employee> staff = loadStaffFromFile();
-        Collections.sort(staff, (o1, o2) -> {
-            if (o1.getSalary().compareTo(o2.getSalary()) == 0) {
-            return o1.getName().compareTo(o2.getName());}
-            else {
-            return o1.getSalary().compareTo(o2.getSalary());
-            }
-        });
-
+        Comparator<Employee> stafftwo = Comparator.comparing(Employee::getSalary).thenComparing(Employee::getName);
+        Collections.sort(staff, stafftwo);
+        //==============================================================================================================
         for (Employee employee : staff ){
         System.out.println(employee);
 }
