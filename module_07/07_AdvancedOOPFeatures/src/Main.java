@@ -9,9 +9,15 @@ public class Main
 {
     private static String staffFile = "data/staff.txt";
     private static String dateFormat = "dd.MM.yyyy";
+    private static String startYear2017 = "01.01.2017";
+    private static String endYear2017 = "31.12.2017";
+    private static Date dateStartYear2017 = null;
+    private static Date dateEndYear2017 = null;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws ParseException {
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+        dateStartYear2017 = format.parse(startYear2017);
+        dateEndYear2017 = format.parse(endYear2017);
         //=============Первый вариант сортировки по двум критериям =====================================================
         //ArrayList<Employee> staff = loadStaffFromFile();
         //Collections.sort(staff, (o1, o2) -> {
@@ -30,6 +36,13 @@ public class Main
         for (Employee employee : staff ){
         System.out.println(employee);
 }
+        System.out.println();
+        Stream <Employee> stream = staff.stream();
+        //stream.filter(employee -> employee.getWorkStart().after(dateStartYear2017) && employee.getWorkStart().before(dateEndYear2017)).forEach(System.out :: println); Фильтр по дате приема на работу
+        //staff.stream().max(Comparator.comparing(Employee::getSalary)).ifPresent(System.out :: println); Нахождение максимального значения зарплаты
+
+        (stream.filter(employee -> employee.getWorkStart().after(dateStartYear2017) && employee.getWorkStart().before(dateEndYear2017))).max(Comparator.comparing(Employee::getSalary)).ifPresent(System.out :: println);
+
     }
 
     private static ArrayList<Employee> loadStaffFromFile()
