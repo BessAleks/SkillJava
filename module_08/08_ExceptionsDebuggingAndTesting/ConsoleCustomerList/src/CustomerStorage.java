@@ -13,7 +13,7 @@ public class CustomerStorage
     {
         String[] components = data.split("\\s+");
         if (components.length != 4){
-            throw new IllegalArgumentException("Wrong format! Right command:\n" + Main.getAddCommand());
+            throw new ArrayIndexOutOfBoundsException("Wrong format! Right command:\n" + Main.getAddCommand());
         }
         else if ((components[1].matches("\\d +")) && (components[2].matches("\\d"))){
             throw new IllegalArgumentException("Error name!");
@@ -21,6 +21,7 @@ public class CustomerStorage
         else if ((!components[3].contains("@") && (!components[3].contains(".")))){
         throw new IllegalArgumentException("Error email!");
         }
+
         String name = components[0] + " " + components[1];
         storage.put(name, new Customer(name, components[3], components[2]));
     }

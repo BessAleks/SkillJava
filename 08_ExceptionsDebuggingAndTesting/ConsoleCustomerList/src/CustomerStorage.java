@@ -14,26 +14,25 @@ public class CustomerStorage
         try {
             String[] components = data.split("\\s+");
             if(components.length != 4){
-                throw new Exception("Wrong length!");
+                throw new ArrayIndexOutOfBoundsException("Wrong length!");
             }
             else if(!components[0].matches("[а-яА-Я-]+")){
-                throw new Exception("Wrong name!");
+                throw new IllegalArgumentException("Wrong name!");
             }
             else if(!components[1].matches("[а-яА-Я-]+")){
-                throw new Exception("Wrong surname!");
+                throw new IllegalArgumentException("Wrong surname!");
             }
             else if(!components[2].matches("^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$")){
-                throw new Exception("Wrong eMail!");
+                throw new IllegalArgumentException("Wrong eMail!");
             }
             else if(!components[3].matches("^[0-9-]+$")){
-                throw new Exception("Wrong phone!");
+                throw new IllegalArgumentException("Wrong phone!");
             }
             else {
                 String name = components[0] + " " + components[1];
                 storage.put(name, new Customer(name, components[3], components[2]));
             }
-        }
-        catch (Exception e){
+        } catch (Exception e){
             System.out.println(e);
         }
     }
