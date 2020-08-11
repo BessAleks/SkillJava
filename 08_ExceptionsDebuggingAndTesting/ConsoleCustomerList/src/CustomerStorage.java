@@ -26,7 +26,7 @@ public class CustomerStorage
                 throw new IllegalArgumentException("Wrong eMail!");
             }
             else if(!components[3].matches("^[0-9-]+$")){
-                throw new IllegalArgumentException("Wrong phone!");
+                throw new MyException("Wrong phone!");
             }
             else {
                 String name = components[0] + " " + components[1];
