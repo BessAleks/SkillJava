@@ -8,12 +8,15 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.junit.Assert.*;
 
 public class RouteCalculatorTest extends TestCase {
     List<Station> route;
     StationIndex stationIndex = new StationIndex();
+    RouteCalculator calculator;
 
     @Before
     public void setUp() throws Exception {
@@ -33,26 +36,16 @@ public class RouteCalculatorTest extends TestCase {
         route.add(new Station("Восьмая(3)",line3));
         route.add(new Station("Девятая(3)",line3));
 
-        stationIndex.addLine(line1);
-        //stationIndex.addLine(line2);
-        //stationIndex.addLine(line3);
+        Stream.of(line1, line2, line3).forEach(stationIndex::addLine);
+        Stream.of(route.get(0),route.get(1),route.get(2),route.get(3),route.get(4),route.get(5),route.get(6),route.get(7),route.get(8)).peek(s -> s.getLine().addStation(s)).forEach(stationIndex::addStation);
 
-        for (Station station : route) {
-        stationIndex.addStation(station);
-        }
-        for (Station station : stationIndex.stations) {
-            List <Station> st = new ArrayList<>();
+        stationIndex.addConnection(Stream.of(route.get(1), route.get(4)).collect(Collectors.toList()));
+        stationIndex.addConnection(Stream.of(route.get(3), route.get(7)).collect(Collectors.toList()));
+        stationIndex.getConnectedStations(route.get(1));
+        stationIndex.getConnectedStations(route.get(3));
 
-            for (Station stationTwo : stationIndex.stations) {
-            if(station.getLine().equals(stationTwo.getLine())){
-                st.add(stationTwo);
-            }
-            if((station.getName().equals("Вторая(1)") && stationTwo.getName().equals("Пятая(2)")) || (station.getName().equals("Четвертая(2)") && stationTwo.getName().equals("Восьмая(3)"))){
-                st.add(stationTwo);
-            }
-            }
-            stationIndex.addConnection(st);
-        }
+        calculator = new RouteCalculator(stationIndex);
+
     }
 
     @After
@@ -61,8 +54,20 @@ public class RouteCalculatorTest extends TestCase {
 
     @Test
     public void testGetShortestRoute() {
-        List<Station> actual = new RouteCalculator(stationIndex).getShortestRoute(route.get(0),route.get(2));
+        List<Station> actual = calculator.getShortestRoute(route.get(0),route.get(2));
         List<Station> expected = new ArrayList<>(Arrays.asList(route.get(0),route.get(1),route.get(2)));
+        assertEquals(expected,actual);
+    }
+    @Test
+    public void testGetShortestRouteTwo() {
+        List<Station> actual = calculator.getShortestRoute(route.get(0),route.get(5));
+        List<Station> expected = new ArrayList<>(Arrays.asList(route.get(0),route.get(1),route.get(4),route.get(5)));
+        assertEquals(expected,actual);
+    }
+    @Test
+    public void testGetShortestRouteThree() {
+        List<Station> actual = calculator.getShortestRoute(route.get(0),route.get(8));
+        List<Station> expected = new ArrayList<>(Arrays.asList(route.get(0),route.get(1),route.get(4),route.get(3),route.get(7),route.get(8)));
         assertEquals(expected,actual);
     }
 

@@ -22,7 +22,10 @@
     <list default="true" id="8a5e1234-1100-4917-9bdf-687150e205e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ConsoleCustomerList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ConsoleCustomerList/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RouteCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RouteCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RouteCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RouteCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RouteCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RouteCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RouteCalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RouteCalculatorTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,8 +123,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RouteCalculatorTest" />
-        <item itemvalue="JUnit.RouteCalculatorTest.testGetShortestRoute" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.RouteCalculatorTest.testGetShortestRoute" />
         <item itemvalue="JUnit.RouteCalculatorTest.testCalculateDuration" />
         <item itemvalue="JUnit.All in SPBMetro" />
       </list>
@@ -161,38 +164,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597129723533" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1597143783115">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1597145968371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597143783115" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1597143783115">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597145968371" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1597145968371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597143783115" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1597143783115">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597145968371" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1597145968371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597143783115" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1597143783115">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597145968371" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1597145968371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597143783115" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1597143773367">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597145968371" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1597145392042">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597143773367" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1597143773367">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597145392042" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1597145392042">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597143773367" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1597143773367">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597145392042" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1597145392042">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597143773367" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1597143773367">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597145392042" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1597145392042">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597143773367" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597145392042" />
     <state x="731" y="330" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1597067183716">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -201,7 +204,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SPBMetro$All_in_SPBMetro.ic" NAME="All in SPBMetro Coverage Results" MODIFIED="1597067439577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SPBMetro$RouteCalculatorTest_testGetShortestRoute.ic" NAME="RouteCalculatorTest.testGetShortestRoute Coverage Results" MODIFIED="1597141526745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SPBMetro$RouteCalculatorTest.ic" NAME="RouteCalculatorTest Coverage Results" MODIFIED="1597138220339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SPBMetro$RouteCalculatorTest.ic" NAME="RouteCalculatorTest Coverage Results" MODIFIED="1597145846301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="masterDetails">
     <states>

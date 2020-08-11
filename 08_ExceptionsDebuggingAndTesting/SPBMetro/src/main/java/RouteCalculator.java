@@ -113,6 +113,9 @@ public class RouteCalculator
                 }
             }
         }
+        if (route.size() == 0){ //Добавление условия
+            return null;
+        }
         return route;
     }
 
